@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Results - 🛡️Secure Scan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛡️Secure Scan</div>
+    </header>
+    <div class="container">
+        <h1>🔍 Scan Results for {{ url }}</h1>
+        <p>🕒 Completed at {{ timestamp }}</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Payload</th>
+                    <th>Status Code</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.payload }}</td>
+                    <td>{{ result.status_code }}</td>
+                    <td>{{ result.message }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a class="button" href="/">🔄 Run Another Scan</a>
+    </div>
+    <footer class="footer">
+        <p>© 2025 SecureScan Technologies | Staying Ahead of Threats 🚀</p>
+    </footer>
+</body>
+</html>

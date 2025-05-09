@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛡️SecureScan: Secure Your Web</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🛡️SECURE SCAN</div>
+    </header>
+    <div class="container">
+        <h1>Welcome to 🛡️SECURE SCAN</h1>
+        <p>Your reliable SQL Injection vulnerability scanner! 🌐</p>
+        {% if error %}
+            <div class="error">{{ error }}</div>
+        {% endif %}
+        <form action="/scan" method="POST">
+            <label for="url">🔗 Enter Target URL:</label>
+            <input type="text" id="url" name="url" placeholder="http://example.com">
+            <button type="submit">🚀 Scan Now</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>© 2025Secure Scan | Securing the web, one scan at a time! 🌟</p>
+    </footer>
+</body>
+</html>
